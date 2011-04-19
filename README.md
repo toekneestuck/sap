@@ -21,6 +21,7 @@ You can also specify the distance from the top of the viewport that you want Sap
 ## Demo
 
 [View Demo Here](http://www.zackkitzmiller.info/sap/)
+[View Other Demo](http://www.zackkitzmiller.info/sap/demo.html)
 
 ## License
 
