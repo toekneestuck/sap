@@ -12,7 +12,7 @@ You can apply Sap to any element in the DOM by simply calling `$(selector).sap()
 
     $('#item').sap();
 
-You can also specify the distance from the top of the window that you want Sap to activate
+You can also specify the distance from the top of the viewport that you want Sap to activate
 
     $('#item').sap({
 		distanceFromTheTop: 0
@@ -20,7 +20,7 @@ You can also specify the distance from the top of the window that you want Sap t
 	
 ## Demo
 
-[Demo Here](http://zackkitzmiler.info/sap)
+[View Demo Here](http://www.zackkitzmiller.info/sap/)
 
 ## License
 
