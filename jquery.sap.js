@@ -1,5 +1,5 @@
 /**
- * Sap v1.0
+ * Sap v1.0.1
  * 
  * Inspired by Contained Sticky Scroll v1.1 By Matt Ward
  * http://blog.echoenduring.com/2010/11/15/freebie-contained-sticky-scroll-jquery-plugin/
@@ -21,10 +21,11 @@
     var oldTop = $objizzle.offset().top;
     var width  = $objizzle.width() + 'px';
     var $shim  = $('<div class="sap-shimy-shim"></div>');
+    var theWindow = $(window);
     
-    $(window).scroll(function() {
+    theWindow.scroll(function() {
 
-        var top = $(window).scrollTop();
+        var top = theWindow.scrollTop();
         
         if ((top + options.distanceFromTheTop) > $objizzle.offset().top)
         {
