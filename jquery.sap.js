@@ -1,11 +1,11 @@
-/*!
+/**
  * Sap v1.0
  * 
  * Inspired by Contained Sticky Scroll v1.1 By Matt Ward
  * http://blog.echoenduring.com/2010/11/15/freebie-contained-sticky-scroll-jquery-plugin/
  *
- * Forrst
-*/
+ * (c) 2011 Forrst, LLC
+ */
 (function($) {
 
     $.fn.sap = function(options) {
