@@ -1,0 +1,52 @@
+/*!
+ * Sap v1.0
+ * 
+ * Inspired by Contained Sticky Scroll v1.1 By Matt Ward
+ * http://blog.echoenduring.com/2010/11/15/freebie-contained-sticky-scroll-jquery-plugin/
+ *
+ * Forrst
+*/
+(function($) {
+
+    $.fn.sap = function(options) {
+  
+    var defaults = {  
+        distanceFromTheTop: 0
+    };  
+                  
+    options = $.extend(defaults, options);
+    
+    var $objizzle = $(this);
+    
+    var oldTop = $objizzle.offset().top;
+    var width  = $objizzle.width() + 'px';
+    var $shim  = $('<div class="sap-shimy-shim"></div>');
+    
+    $(window).scroll(function() {
+
+        var top = $(window).scrollTop();
+        
+        if ((top + options.distanceFromTheTop) > $objizzle.offset().top)
+        {
+            $objizzle.css({
+                position: 'fixed',
+                width: width,
+                top: options.distanceFromTheTop + 'px'
+            });
+            
+            $shim.css({width: width, height: $objizzle.height()});
+            
+            $objizzle.before($shim);
+        }
+        else if (top + options.distanceFromTheTop < oldTop) 
+        {
+            $shim.remove();
+            $objizzle.css({
+                position: 'relative',
+                width: width,
+                top: ''
+            });
+        }
+    });
+  };
+})(jQuery);
