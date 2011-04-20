@@ -1,5 +1,5 @@
 /**
- * Sap v1.0.1
+ * Sap v1.0.2
  * 
  * Inspired by Contained Sticky Scroll v1.1 By Matt Ward
  * http://blog.echoenduring.com/2010/11/15/freebie-contained-sticky-scroll-jquery-plugin/
@@ -27,7 +27,7 @@
 
         var top = theWindow.scrollTop();
         
-        if ((top + options.distanceFromTheTop) > $objizzle.offset().top)
+        if ((top + options.distanceFromTheTop + $objizzle.height()) < ($(document).height() - theWindow.height()) && (top + options.distanceFromTheTop) > $objizzle.offset().top)        
         {
             $objizzle.css({
                 position: 'fixed',
