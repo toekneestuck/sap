@@ -18,16 +18,17 @@
     
     var $objizzle = $(this);
     
-    var oldTop = $objizzle.offset().top;
-    var width  = $objizzle.width() + 'px';
-    var $shim  = $('<div class="sap-shimy-shim"></div>');
+    var oldTop    = $objizzle.offset().top;
+    var width     = $objizzle.width() + 'px';
+    var $shim     = $('<div class="sap-shimy-shim"></div>');
     var theWindow = $(window);
+    var theDoc    = $(document);
     
     theWindow.scroll(function() {
 
         var top = theWindow.scrollTop();
         
-        if ((top + options.distanceFromTheTop + $objizzle.height()) < ($(document).height() - theWindow.height()) && (top + options.distanceFromTheTop) > $objizzle.offset().top)        
+        if ((top + options.distanceFromTheTop + $objizzle.height()) < (theDoc.height() - theWindow.height()) && (top + options.distanceFromTheTop) > $objizzle.offset().top)        
         {
             $objizzle.css({
                 position: 'fixed',
@@ -45,7 +46,7 @@
             $objizzle.css({
                 position: 'relative',
                 width: width,
-                top: ''
+                top: '' 
             });
         }
     });
