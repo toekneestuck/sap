@@ -23,6 +23,11 @@ You can also specify the distance from the top of the viewport that you want Sap
 [View Demo Here](http://www.zackkitzmiller.info/sap/)
 [View Other Demo](http://www.zackkitzmiller.info/sap/demo2.html)
 
+## Known Issues
+
+* Sap does not work on iOS.
+* Sap does not always reset default CSS properly. 
+
 ## License
 
 Licensed under the [MIT License](http://www.opensource.org/licenses/mit-license.php).
