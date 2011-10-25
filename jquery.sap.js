@@ -1,11 +1,12 @@
 /**
- * Sap v1.0.3
+ * Sap v1.0.4
  * 
  * Inspired by Contained Sticky Scroll v1.1 By Matt Ward
  * http://blog.echoenduring.com/2010/11/15/freebie-contained-sticky-scroll-jquery-plugin/
  *
  * (c) 2011 Forrst, LLC
  */
+ 
 (function($) {
 
     $.fn.sap = function(options) {
@@ -17,6 +18,8 @@
     options = $.extend(defaults, options);
     
     var $objizzle = $(this);
+    
+    if (!$objizzle.length) return;
     
     var oldTop    = $objizzle.offset().top;
     var width     = $objizzle.width() + 'px';
