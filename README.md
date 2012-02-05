@@ -20,10 +20,16 @@ You can also specify the distance from the top of the viewport that you want Sap
 		distanceFromTheTop: 0
 	});
 
-Additionally you can override a class that is applied when Sap activates:
+You can override a class that is applied when Sap activates:
 
 	$('#item').sap({
 		class : 'my-new-class'
+	});
+
+You can override the width of both the shim and when the element is reset
+
+	$('#item').sap({
+		width : '100%'
 	});
 	
 ## Demo
