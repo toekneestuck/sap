@@ -13,7 +13,7 @@
 	$.fn.sap = function(options) {
 
 		var defaults = {
-			class : 'sappy',
+			activeClass : 'sappy',
 			distanceFromTheTop: 0,
 			top : ''
 		};
@@ -41,7 +41,7 @@
 					position: 'fixed',
 					width: options.width ? options.width : width,
 					top: options.distanceFromTheTop + 'px'
-				}).addClass(options.class);
+				}).addClass(options.activeClass);
 
 				$shim.css({width: width, height: $objizzle.height()});
 
@@ -54,7 +54,7 @@
 					position: oldPos,
 					width: options.width ? options.width : width,
 					top: '' 
-				}).removeClass(options.class);
+				}).removeClass(options.activeClass);
 			}
 		});
 	};
